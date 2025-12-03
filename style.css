@@ -1,0 +1,181 @@
+/* 1. Variables CSS pour la modularité des couleurs et polices */
+:root {
+    --primary-color: #007bff; /* Bleu élégant */
+    --secondary-color: #6c757d; /* Gris secondaire */
+    --background-light: #f8f9fa; /* Arrière-plan très clair */
+    --background-dark: #343a40; /* Arrière-plan foncé (footer/header) */
+    --text-color: #212529; /* Texte principal */
+    --font-family-primary: 'Montserrat', sans-serif;
+    --spacing-large: 40px;
+    --spacing-medium: 20px;
+}
+
+/* 2. Réinitialisation de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* 3. Style du Header et de la Navigation (Modulaire avec Flexbox) */
+.header {
+    background-color: var(--background-dark);
+    color: #fff;
+    padding: var(--spacing-medium) var(--spacing-large);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex; /* Utilisation de Flexbox pour la navigation horizontale */
+}
+
+.nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* 4. Contenu Principal (Main) et Sections */
+.main-content {
+    padding: var(--spacing-medium);
+}
+
+.section {
+    padding: var(--spacing-large) 0;
+    border-bottom: 1px solid #e9ecef;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* 5. Section Hero (Point focal) */
+.hero {
+    background-color: var(--background-light);
+    padding: 80px 40px;
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.button.primary:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+    transform: translateY(-2px);
+}
+
+/* 6. Conteneur de Cartes (Modulable avec Flexbox) */
+.cards-container {
+    display: flex;
+    gap: var(--spacing-medium);
+    justify-content: center;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur petit écran */
+}
+
+.card {
+    flex: 1 1 300px; /* Base de 300px, flexible pour s'étendre/rétrécir */
+    background-color: #fff;
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Ombre légère et élégante */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Effet subtil au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* 7. Footer */
+.footer {
+    background-color: var(--background-dark);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: var(--spacing-medium);
+    margin-top: var(--spacing-large);
+}
+
+/* 8. Adaptabilité (Media Queries) */
+@media (max-width: 768px) {
+    /* Ajustements pour les écrans de taille tablette/mobile */
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 15px;
+    }
+
+    .nav ul {
+        flex-direction: column; /* La navigation devient verticale sur petit écran */
+        gap: 5px;
+    }
+
+    .nav ul li a {
+        display: block;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+}
