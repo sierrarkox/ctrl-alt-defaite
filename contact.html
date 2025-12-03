@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous | Ctrl-alt-defaite</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles spécifiques pour la page Contact afin de respecter le design */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-light); /* Utilisation de la variable */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-medium);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Ctrl-alt-defaite</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="main.html#accueil">Accueil</a></li>
+                <li><a href="main.html#services">Services</a></li>
+                <li><a href="main.html#a-propos">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="contact" class="section">
+            <h3>Contactez-nous</h3>
+            <p style="text-align: center; margin-bottom: 40px;">Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
+
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Votre Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Votre Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet :</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="button primary" style="width: 100%;">Envoyer le Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Nom du Site. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
