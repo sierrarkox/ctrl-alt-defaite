@@ -1,16 +1,15 @@
-import * as THREE from "three"
+import * as THREE from "three";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FontLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
-const WIDTH = window.innerWidth - 0.2*window.innerWidth;
-const HEIGHT = 0.7*window.innerHeight;
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0x111111, 1);
-document.getElementById("three-canvas").appendChild(renderer.domElement);
-
+document.body.appendChild(renderer.domElement);
 
 
 const scene = new THREE.Scene();
@@ -51,84 +50,6 @@ Obsolescence.userData.link = "toto.html";//Changer par la bonne page
 Obsolescence.position.set(12, 25, -15);
 scene.add(Obsolescence);
 
-const c1 = new THREE.QuadraticBezierCurve3(
-    new THREE.Vector3(0, 0, 0),     // point de départ
-    new THREE.Vector3(-30, 12, -10),    // point de contrôle
-    new THREE.Vector3(12, 25, -15)     // point d’arrivée
-);
-
-const ps1 = c1.getPoints(100);
-const g1 = new THREE.BufferGeometry().setFromPoints(ps1);
-const m1 = new THREE.LineBasicMaterial({ color: 0xffffff });
-const li1 = new THREE.Line(g1, m1);
-
-scene.add(li1);
-
-const c2 = new THREE.QuadraticBezierCurve3(
-    new THREE.Vector3(0, 0, 0),     // point de départ
-    new THREE.Vector3(10, -5, -20),    // point de contrôle
-    new THREE.Vector3(25, 12, 12)     // point d’arrivée
-);
-
-const ps2 = c2.getPoints(100);
-const g2 = new THREE.BufferGeometry().setFromPoints(ps2);
-const m2 = new THREE.LineBasicMaterial({ color: 0xffffff });
-const li2 = new THREE.Line(g2, m2);
-
-scene.add(li2);
-
-const c3 = new THREE.QuadraticBezierCurve3(
-    new THREE.Vector3(0, 0, 0),     // point de départ
-    new THREE.Vector3(0, -30, -10),    // point de contrôle
-    new THREE.Vector3(-25, -25, -25)     // point d’arrivée
-);
-
-const ps3 = c3.getPoints(100);
-const g3 = new THREE.BufferGeometry().setFromPoints(ps3);
-const m3 = new THREE.LineBasicMaterial({ color: 0xffffff });
-const li3 = new THREE.Line(g3, m3);
-
-scene.add(li3);
-
-const c4 = new THREE.QuadraticBezierCurve3(
-    new THREE.Vector3(0, 0, 0),     // point de départ
-    new THREE.Vector3(-20, -20, 20),    // point de contrôle
-    new THREE.Vector3(12, -20, 25)     // point d’arrivée
-);
-
-const ps4 = c4.getPoints(100);
-const g4 = new THREE.BufferGeometry().setFromPoints(ps4);
-const m4 = new THREE.LineBasicMaterial({ color: 0xffffff });
-const li4 = new THREE.Line(g4, m4);
-
-scene.add(li4);
-
-const c5 = new THREE.QuadraticBezierCurve3(
-    new THREE.Vector3(25, 12, 12),     // point de départ
-    new THREE.Vector3(40, 25, -10),    // point de contrôle
-    new THREE.Vector3(12, 25, -15)     // point d’arrivée
-);
-
-const ps5 = c5.getPoints(100);
-const g5 = new THREE.BufferGeometry().setFromPoints(ps5);
-const m5 = new THREE.LineBasicMaterial({ color: 0xffffff });
-const li5 = new THREE.Line(g5, m5);
-
-scene.add(li5);
-
-const c6 = new THREE.QuadraticBezierCurve3(
-    new THREE.Vector3(12, -20, 25),     // point de départ
-    new THREE.Vector3(30, -12, 10),    // point de contrôle
-    new THREE.Vector3(25, 12, 12)     // point d’arrivée
-);
-
-const ps6 = c6.getPoints(100);
-const g6 = new THREE.BufferGeometry().setFromPoints(ps6);
-const m6 = new THREE.LineBasicMaterial({ color: 0xffffff });
-const li6 = new THREE.Line(g6, m6);
-
-scene.add(li6);
-
 const light = new THREE.DirectionalLight(0xffffff, 5);
 light.position.set(0, 0, 1);
 scene.add(light);
@@ -137,6 +58,84 @@ const controls = new OrbitControls( camera, renderer.domElement );
 controls.autoRotate = true;
 controls.enabled = true; 
 controls.autoRotateSpeed = 3;
+
+const loader = new FontLoader();
+const font = await loader.loadAsync('https://unpkg.com/three@0.152.2/examples/fonts/helvetiker_regular.typeface.json');
+const text = new TextGeometry('Nird', {
+    font: font,
+    size: 10,
+    depth: 10,
+    curveSegments: 12,
+});
+text.center();
+
+const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const textMesh = new THREE.Mesh(text, textMaterial);
+textMesh.position.set(0,17,0);
+scene.add(textMesh);
+
+const EcoLoader = new FontLoader();
+const EcoFont = await EcoLoader.loadAsync('https://unpkg.com/three@0.152.2/examples/fonts/helvetiker_regular.typeface.json');
+const EcoText = new TextGeometry('Ecologie', {
+    font: EcoFont,
+    size: 5,
+    depth: 5,
+    curveSegments: 12,
+});
+EcoText.center();
+
+const EcoMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const EcoMesh = new THREE.Mesh(EcoText, EcoMaterial);
+EcoMesh.position.set(-25,-14,-25);
+scene.add(EcoMesh);
+
+const Linloader = new FontLoader();
+const Linfont = await Linloader.loadAsync('https://unpkg.com/three@0.152.2/examples/fonts/helvetiker_regular.typeface.json');
+const Lintext = new TextGeometry('Linux = Goat', {
+    font: Linfont,
+    size: 5,
+    depth: 5,
+    curveSegments: 12,
+});
+Lintext.center();
+
+const LinMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const LinMesh = new THREE.Mesh(Lintext, LinMaterial);
+LinMesh.position.set(12, -9, 25);
+scene.add(LinMesh);
+
+const GAFloader = new FontLoader();
+const GAFfont = await GAFloader.loadAsync('https://unpkg.com/three@0.152.2/examples/fonts/helvetiker_regular.typeface.json');
+const GAFtext = new TextGeometry('GAFAM', {
+    font: GAFfont,
+    size: 5,
+    depth: 5,
+    curveSegments: 12,
+});
+GAFtext.center();
+
+const GAFMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const GAFMesh = new THREE.Mesh(GAFtext, GAFMaterial);
+GAFMesh.position.set(12, 36, -15);
+scene.add(GAFMesh);
+
+const obsloader = new FontLoader();
+const obsfont = await obsloader.loadAsync('https://unpkg.com/three@0.152.2/examples/fonts/helvetiker_regular.typeface.json');
+const obstext = new TextGeometry('Obsolescence', {
+    font: obsfont,
+    size: 5,
+    depth: 5,
+    curveSegments: 12,
+});
+obstext.center();
+
+const obsMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const obsMesh = new THREE.Mesh(obstext, obsMaterial);
+obsMesh.position.set(25, 23, 12);
+scene.add(obsMesh);
+
+
+
 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -169,7 +168,12 @@ window.addEventListener("click", onClick);
 
 function render() {
     requestAnimationFrame(render); 
-    controls.update();       
+    controls.update();
+    textMesh.lookAt(camera.position);
+    EcoMesh.lookAt(camera.position);
+    LinMesh.lookAt(camera.position);
+    obsMesh.lookAt(camera.position);
+    GAFMesh.lookAt(camera.position);       
     renderer.render(scene, camera);
 }
     
