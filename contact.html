@@ -3,66 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactez-nous | Ctrl-alt-defaite</title>
+    <title>Contactez-nous | La démarche NIRD</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles spécifiques pour la page Contact afin de respecter le design */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: var(--background-light); /* Utilisation de la variable */
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .form-group {
-            margin-bottom: var(--spacing-medium);
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 700;
-            color: var(--text-color);
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-            font-size: 1em;
-            box-sizing: border-box;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input[type="text"]:focus,
-        .form-group input[type="email"]:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-    </style>
 </head>
 <body>
 
     <header class="header">
-        <h1>Ctrl-alt-defaite</h1>
+        <div class="brand">
+            <a href="index.html" class="brand-link">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
         <nav class="nav">
             <ul>
-                <li><a href="index.html#accueil">Accueil</a></li>
-                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="index.html#a-propos">À Propos</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contactez-nous</a></li>
+                <body data-theme="light"> 
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch"> <span class="slider"></span>
+                    </label>
+                </body>
             </ul>
         </nav>
     </header>
@@ -103,6 +65,6 @@
     <footer class="footer">
         <p>&copy; 2024 Nom du Site. Tous droits réservés.</p>
     </footer>
-
+    <script src="javascript"></script>
 </body>
 </html>
