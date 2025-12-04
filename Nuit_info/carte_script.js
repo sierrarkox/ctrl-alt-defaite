@@ -4,12 +4,13 @@ import { FontLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
-const WIDTH = 600;
-const HEIGHT = 400;
+const WIDTH = window.innerWidth - 0.2*window.innerWidth;
+const HEIGHT = 0.7*window.innerHeight;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0x111111, 1);
-document.body.appendChild(renderer.domElement);
+document.getElementById("three-canvas").appendChild(renderer.domElement);
+
 
 
 const scene = new THREE.Scene();
