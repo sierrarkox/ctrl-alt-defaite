@@ -5,91 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La démarche NIRD</title>
     <meta name="description" content="Une démarche sensibilisant à un numérique libre, responsable et écocitoyen.">
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-theme="light">
 
+    <!-- ===== HEADER ===== -->
     <header class="header">
         <div class="brand">
             <a href="index.html" class="brand-link">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="assets/logo.png" alt="Logo" class="logo">
             </a>
         </div>
+
         <nav class="nav">
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#a-propos">À Propos</a></li>
                 <li><a href="contact.html">Contactez-nous</a></li>
-                <body data-theme="light"> 
+
+                <!-- Theme Switch -->
+                <li>
                     <label class="switch">
-                        <input type="checkbox" id="theme-switch"> <span class="slider"></span>
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider"></span>
                     </label>
-                </body>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <!-- ===== MAIN ===== -->
     <main class="main-content">
+
+        <!-- HERO -->
         <section id="accueil" class="hero">
-            <br>
-            <br>
+
             <h2>Bienvenue sur notre site</h2>
             <p>Découvrez nos solutions innovantes et notre design raffiné.</p>
-            <a href="https://youtu.be/xvFZjo5PgG0?si=XgZmtR32vty2khtP" class="button primary">Commencer</a>
         </section>
 
+        <!-- JALONS -->
         <section id="Explain" class="section cards-container">
             <div class="card card--accent-1">
                 <h4>Jalon 1 – Mobilisation</h4>
             </div>
+
             <div class="card card--accent-2">
                 <h4>Jalon 2 – Expérimentation</h4>
             </div>
+
             <div class="card card--accent-3">
                 <h4>Jalon 3 – Intégration</h4>
             </div>
         </section>
 
+        <!-- CARTE MENTALE -->
         <section id="parcours" class="carte_mantale">
             <h3>Nos Services</h3>
-            <ul>
-                <li>Consultation Personnalisée</li>
-                <li>Solutions Innovantes</li>
-                <li>Support Continu</li>
-                <li>Consultation Personnalisée</li>
-                <li>Solutions Innovantes</li>
-                <li>Support Continu</li>
-                <li>Consultation Personnalisée</li>
-                <li>Solutions Innovantes</li>
-                <li>Support Continu</li>
-                <li>Consultation Personnalisée</li>
-                <li>Solutions Innovantes</li>
-                <li>Support Continu</li>
-                <li>Consultation Personnalisée</li>
-                <li>Solutions Innovantes</li>
-                <li>Support Continu</li>
-                <li>Consultation Personnalisée</li>
-                <li>Solutions Innovantes</li>
-                <li>Support Continu</li>
-                <li>Consultation Personnalisée</li>
-                <li>Solutions Innovantes</li>
-                <li>Support Continu</li>
-                <li>Consultation Personnalisée</li>
-                <li>Solutions Innovantes</li>
-                <li>Support Continu</li>
-                
-            </ul>
+            <div id="carte-mentale-container" style="width:100%;height:600px;">
+                <script type="importmap">
+                {
+                "imports": {
+                    "three": "https://threejs.org/build/three.module.js",
+                    "three/addons/": "https://threejs.org/examples/jsm/"
+                    }
+                }
+                </script>
+            </div>
         </section>
+
+        <!-- À PROPOS -->
         <section id="a-propos" class="section about">
             <h3>Notre Philosophie</h3>
             <p>Nous combinons l'esthétique et la fonctionnalité pour un résultat durable.</p>
         </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <p>Des trucs en bas</p>
     </footer>
+
     <script src="javascript"></script>
+    <script type="module" src="carte_script.js"></script>
+    
 </body>
 </html>
