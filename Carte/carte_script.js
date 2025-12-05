@@ -4,16 +4,17 @@ import { FontLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
-const WIDTH = window.innerWidth;
-const HEIGHT = window.innerHeight;
+const WIDTH = 0.8*window.innerWidth;
+const HEIGHT = 0.7*window.innerHeight;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor(0x111111, 1);
+document.getElementById("three-canvas").appendChild(renderer.domElement);
+
 const floader = new THREE.TextureLoader();
-floader.load('prairie.jpg', function (texture) {
+floader.load('Carte/prairie.jpg', function (texture) {
     scene.background = texture;
 });
-document.body.appendChild(renderer.domElement);
-
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
@@ -21,11 +22,11 @@ camera.position.z = 100;
 scene.add(camera);
 
 const ftextureLoader = new THREE.TextureLoader();
-const ftexture = ftextureLoader.load('Ruche/ruche_baseColor.png');
+const ftexture = ftextureLoader.load('Carte/Ruche/ruche_baseColor.png');
 
 const fobjLoader = new OBJLoader();    
 fobjLoader.load(
-    'Ruche/ruche.obj',
+    'Carte/Ruche/ruche.obj',
     (obj) => {
     obj.traverse((child) => {
         if (child.isMesh) {
@@ -44,11 +45,11 @@ fobjLoader.load(
 
 
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('abeille/material_0_diffuse.png');
+const texture = textureLoader.load('Carte/abeille/material_0_diffuse.png');
 
 const objLoader = new OBJLoader();    
 objLoader.load(
-    'abeille/abeille_3d.obj',
+    'Carte/abeille/abeille_3d.obj',
     (obj) => {
     // Lorsque l'OBJ est chargé
     obj.traverse((child) => {
@@ -63,14 +64,13 @@ objLoader.load(
     obj.scale.set(1, 1, 1);
     obj.position.set(-25, -30, -25);
     obj.lookAt(Nird.position);
-    obj.userData.link = "toto.html";//Changer par la bonne page
     scene.add(obj);
     }
 );
 
 const ol2 = new OBJLoader();    
 ol2.load(
-    'abeille/abeille_3d.obj',
+    'Carte/abeille/abeille_3d.obj',
     (obj) => {
     // Lorsque l'OBJ est chargé
     obj.traverse((child) => {
@@ -85,14 +85,13 @@ ol2.load(
     obj.scale.set(1, 1, 1);
     obj.position.set(25, 7, 12);
     obj.lookAt(Nird.position);
-    obj.userData.link = "toto.html";//Changer par la bonne page
     scene.add(obj);
     }
 );
 
 const ol3 = new OBJLoader();    
 ol3.load(
-    'abeille/abeille_3d.obj',
+    'Carte/abeille/abeille_3d.obj',
     (obj) => {
     // Lorsque l'OBJ est chargé
     obj.traverse((child) => {
@@ -107,14 +106,13 @@ ol3.load(
     obj.scale.set(1, 1, 1);
     obj.position.set(12, -25, 25);
     obj.lookAt(Nird.position);
-    obj.userData.link = "toto.html";//Changer par la bonne page
     scene.add(obj);
     }
 );
 
 const ol4 = new OBJLoader();    
 ol4.load(
-    'abeille/abeille_3d.obj',
+    'Carte/abeille/abeille_3d.obj',
     (obj) => {
     // Lorsque l'OBJ est chargé
     obj.traverse((child) => {
@@ -129,7 +127,6 @@ ol4.load(
     obj.scale.set(1, 1, 1);
     obj.position.set(12, 20, -15);
     obj.lookAt(Nird.position);
-    obj.userData.link = "toto.html";//Changer par la bonne page
     scene.add(obj);
     }
 );
@@ -142,36 +139,36 @@ const Nird = new THREE.Mesh(sg1, sm1);
 Nird.visible = false;
 scene.add(Nird);
 
-const sg2 = new THREE.SphereGeometry(5, 64, 64);
+const sg2 = new THREE.SphereGeometry(10, 64, 64);
 const sm2 = new THREE.MeshLambertMaterial({ color: 0xff336600});
 const Ecologie = new THREE.Mesh(sg2, sm2);
-Ecologie.userData.link = "toto.html";//Changer par la bonne page
+Ecologie.userData.link = "ecologie.html";//Changer par la bonne page
 Ecologie.position.set(-25, -25, -25);
 Ecologie.visible = false;
 scene.add(Ecologie);
 
 
 
-const sg3 = new THREE.SphereGeometry(5, 64, 64);
+const sg3 = new THREE.SphereGeometry(10, 64, 64);
 const sm3 = new THREE.MeshLambertMaterial({ color: 0xffff00});
 const Gafam = new THREE.Mesh(sg3, sm3);
-Gafam.userData.link = "toto.html";//Changer par la bonne page
+Gafam.userData.link = "gafam.html";//Changer par la bonne page
 Gafam.position.set(25, 12, 12);
 Gafam.visible = false;
 scene.add(Gafam);
 
-const sg4 = new THREE.SphereGeometry(5, 64, 64);
+const sg4 = new THREE.SphereGeometry(10, 64, 64);
 const sm4 = new THREE.MeshLambertMaterial({ color: 0xff6666});
 const Linux = new THREE.Mesh(sg4, sm4);
-Linux.userData.link = "toto.html";//Changer par la bonne page
+Linux.userData.link = "linux.html";//Changer par la bonne page
 Linux.position.set(12, -20, 25);
 Linux.visible = false;
 scene.add(Linux);
 
-const sg5 = new THREE.SphereGeometry(5, 64, 64);
+const sg5 = new THREE.SphereGeometry(10, 64, 64);
 const sm5 = new THREE.MeshLambertMaterial({ color: 0xff3399});
 const Obsolescence = new THREE.Mesh(sg5, sm5);
-Obsolescence.userData.link = "toto.html";//Changer par la bonne page
+Obsolescence.userData.link = "obsolescence.html";//Changer par la bonne page
 Obsolescence.position.set(12, 25, -15);
 Obsolescence.visible = false;
 scene.add(Obsolescence);
