@@ -30,6 +30,69 @@
     </header>
     
     <main class="main-content" style="margin-top: 10%;">
+        <!-- Partie informations -->
+        <section id="infos" class="section">
+            <h2>Qu’est-ce que l’obsolescence ?</h2>
+            <p>L'obsolescence est le fait pour un produit ou un service de <strong>devenir périmé, déprécié ou d'être dépassé</strong>, et donc de perdre une partie de sa valeur d'usage, même s'il est toujours en état de fonctionnement.</p>
+            <h3>Quelles sont les différents types d'obsolescence ?</h3>
+            <ul>
+                <li><strong>Technique :</strong> le produit devient obsolète parce que la technologie évolue.</li>
+                <li><strong>Esthétique :</strong> l’objet fonctionne encore mais paraît « dépassé » visuellement.</li>
+                <li><strong>Logicielle :</strong> lorsqu'un appareil ne reçoit plus de mises à jour, cela peut rendre l’appareil lent, instable ou vulnérable, même s’il fonctionne encore physiquement.</li>
+                <li><strong>Programmée :</strong> désigne la stratégie volontaire de réduire la durée de vie d’un produit pour pousser à racheter plus souvent.</li>
+                <li><strong>Incompatibilité :</strong> le produit devient inutilisable parce que l'environnement change.</li>
+            </ul>
+            <h3>Vers une réduction de l’obsolescence</h3>
+            <p>Pour réduire l'obsolescence, plusieurs solutions sont possibles. Par exemple on peut instaurer un droit à la réparation, obligeant les fabricants à fournir les pièces et la documentation nécessaire aux réparations des appareils.
+                <br><br>
+                Les appareils pourraient également devenir modulaires pour permettre à l'utilisateur de changer facilement les pièces défectueuses. Certaines entreprises comme FairPhone ou Framework Laptop utilise déjâ ce principe.
+                <br><br>
+                Pour éviter l'obsolescence logicielle, les entreprises pourraient prolonger les mises à jour sur leurs support pour éviter le vieillissement logiciel.
+            </p>
+        </section>
+
+        <!-- Partie quiz -->
+    <section id="quiz" class="section">
+        <h2>Testez vos connaissances !</h2>
+
+        <div class="quiz-question" data-answer="B">
+            <h4>1. Qu’est-ce que l’obsolescence ?</h4>
+            <label><input type="radio" name="q1" value="A"> </label>
+            <label><input type="radio" name="q1" value="B"> </label>
+            <label><input type="radio" name="q1" value="C"> </label>
+        </div>
+
+        <div class="quiz-question" data-answer="B">
+            <h4>2. Quel phénomène ne peut pas être responsable d'une obsolescence ?</h4>
+            <label><input type="radio" name="q2" value="A"> Les progrès technologique</label>
+            <label><input type="radio" name="q2" value="B"> </label>
+            <label><input type="radio" name="q2" value="C"> L’évolution des normes</label>
+        </div>
+
+        <div class="quiz-question" data-answer="C">
+            <h4>3. Coché la réponse qui correspond à un type d'obsolescence :</h4>
+            <label><input type="radio" name="q3" value="A"> L'obsolescence décalé</label>
+            <label><input type="radio" name="q3" value="B"> L'obsolescence parallèle</label>
+            <label><input type="radio" name="q3" value="C"> L'obsolescence technique</label>
+        </div>
+
+        <div class="quiz-question" data-answer="A">
+            <h4>4. Qu'est ce que la modularité ?</h4>
+            <label><input type="radio" name="q4" value="A"> Car une communauté améliore le logiciel</label>
+            <label><input type="radio" name="q4" value="B"> Car personne ne peut y toucher</label>
+            <label><input type="radio" name="q4" value="C"> La capacité qu'a un appareil pour être modifié</label>
+        </div>
+
+        <div class="quiz-question" data-answer="B">
+            <h4>5. Le contraire de l’open source est :</h4>
+            <label><input type="radio" name="q5" value="A"> Un logiciel libre</label>
+            <label><input type="radio" name="q5" value="B"> Un logiciel propriétaire</label>
+            <label><input type="radio" name="q5" value="C"> Une licence MIT</label>
+        </div>
+
+        <button class="quiz-button" id="submitQuiz">Voir les résultats</button>
+        <div class="quiz-result" id="quizResult"></div>
+    </section>
     </main>
 
     <footer class="footer">
