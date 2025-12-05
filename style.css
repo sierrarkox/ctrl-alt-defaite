@@ -160,11 +160,18 @@ h4 {
 .section {
   background-color: var(--background-section1);
   padding: var(--spacing-large) 0;
-  /* border-bottom: 1px solid var(--background-dark); */
   max-width: 100vw;
   margin: 0;
 }
-
+.about-us {
+  color: var(--text-color);
+}
+.contact-section {
+  background-color: var(--background-section1);
+  padding: var(--spacing-large) 0;
+  max-width: 100vw;
+  margin: 0;
+}
 .section h3 {
   text-align: center;
   margin-bottom: var(--spacing-large);
