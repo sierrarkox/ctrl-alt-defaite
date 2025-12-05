@@ -1,376 +1,398 @@
 /* Explication sous les jalons */
 .jalons-explication {
-    background: var(--background-section1);
-    padding: 32px 0 24px 0;
-    max-width: 900px;
-    margin: 0 auto 32px auto;
+  background: var(--background-section1);
+  padding: 32px 0 24px 0;
+  max-width: 900px;
+  margin: 0 auto 32px auto;
 }
 .jalons-texte {
-    font-size: 1.15em;
-    color: var(--text-color);
-    line-height: 1.7;
-    text-align: left;
-    margin : var(--spacing-large)
+  font-size: 1.15em;
+  color: var(--text-color);
+  line-height: 1.7;
+  text-align: left;
+  margin: var(--spacing-large);
 }
 .jalons-texte p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* ---------------------------------------
    1. VARIABLES CSS
 ---------------------------------------- */
 :root {
-    --primary-color: #ff01fb;
-    --secondary-color: #6c757d;
+  --primary-color: #ff01fb;
+  --secondary-color: #6c757d;
 
-    /* Light theme */
-    --background-color: #ffffff;
-    --background-light: #f8f9fa;
-    --background-dark: #343a40;
-    --background-darker: #212529;
-    --background-section1: #e9e9e9;
-    --background-section2: #f8f8f8;
+  /* Light theme */
+  --background-color: #ffffff;
+  --background-light: #f8f9fa;
+  --background-dark: #343a40;
+  --background-darker: #212529;
+  --background-section1: #e9e9e9;
+  --background-section2: #f8f8f8;
 
-    --text-color: #212529;
+  --text-color: #212529;
 
-    --font-family-primary: 'Montserrat', sans-serif;
-    --spacing-large: 40px;
-    --spacing-medium: 20px;
-
+  --font-family-primary: "Montserrat", sans-serif;
+  --spacing-large: 40px;
+  --spacing-medium: 20px;
 }
 
 /* Dark theme */
 [data-theme="dark"] {
-    --background-color: #262626;
-    --background-light: #1f1f1f;
-    --background-dark: #262626;
-    --background-darker: #1a1a1a;
-    --background-section1:#2c2c2c;
-    --background-section2: #1f1f1f;
+  --background-color: #262626;
+  --background-light: #1f1f1f;
+  --background-dark: #262626;
+  --background-darker: #1a1a1a;
+  --background-section1: #2c2c2c;
+  --background-section2: #1f1f1f;
 
-    --text-color: #e9ecef;
-    --secondary-color: #9aa0a6;
+  --text-color: #e9ecef;
+  --secondary-color: #9aa0a6;
 }
 
 /* ---------------------------------------
    2. RESET
 ---------------------------------------- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: var(--font-family-primary);
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+  font-family: var(--font-family-primary);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Background spécifique pour la page contact */
+body.contact-page {
+  background-image: url("Carte/prairie.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary-color);
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 p {
-    margin-left: var(--spacing-medium);
-    padding: 2%;
+  margin-left: var(--spacing-medium);
+  padding: 2%;
 }
 
-h1, h2, h3, h4 {
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-medium);
-    font-weight: 600;
-    padding: 2%;
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-medium);
+  font-weight: 600;
+  padding: 2%;
 }
-
 
 /* ---------------------------------------
    3. HEADER
 ---------------------------------------- */
 .header {
-    background-color: var(--background-section2);
-    color: var(--text-color);
-    padding: var(--spacing-medium) var(--spacing-large);
+  background-color: var(--background-section2);
+  color: var(--text-color);
+  padding: var(--spacing-medium) var(--spacing-large);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90vw;
-    max-width: 1200px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1200px;
 
-    border-radius: 50px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
-    transition: top 0.3s ease, opacity 0.3s ease;
-    
-    z-index: 1000;
+  transition: top 0.3s ease, opacity 0.3s ease;
+
+  z-index: 1000;
 }
 
 .header h1 {
-    font-weight: 700;
-    margin: 0;
+  font-weight: 700;
+  margin: 0;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo {
-    width: 130px;
-    height: 50px;
+  width: 130px;
+  height: 50px;
 }
 
 .nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 .nav ul li a {
-    color: var(--text-color);
-    padding: 10px 15px;
-    transition: background-color 0.3s;
+  color: var(--text-color);
+  padding: 10px 15px;
+  transition: background-color 0.3s;
 }
 
 .nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
 /* 4. Contenu Principal (Main) et Sections */
 .section {
-    background-color: var(--background-section1);
-    padding: var(--spacing-large) 0;
-    /* border-bottom: 1px solid var(--background-dark); */
-    max-width: 100vw;
-    margin: 0;
+  background-color: var(--background-section1);
+  padding: var(--spacing-large) 0;
+  /* border-bottom: 1px solid var(--background-dark); */
+  max-width: 100vw;
+  margin: 0;
 }
 
 .section h3 {
-    text-align: center;
-    margin-bottom: var(--spacing-large);
-    font-weight: 700;
-    color: var(--primary-color);
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+  font-weight: 700;
+  color: var(--primary-color);
 }
+
 /* ---------------------------------------
    5. HERO
 ---------------------------------------- */
 .hero {
-    background-image: url('assets/abeille.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 80px;
-    text-align: center;
-    width: 100%;
-    position: sticky;
-    border-radius: 0;
-    top: 0;
-    z-index: 1;
-    color: var(--primary-color);
-
+  background-image: url("assets/abeille.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px;
+  text-align: center;
+  width: 100%;
+  position: sticky;
+  border-radius: 0;
+  top: 0;
+  z-index: 1;
+  color: var(--primary-color);
 }
 
 .hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    margin-top: calc(4 * var(--spacing-large));
-    color: var(--primary-color);
-
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  margin-top: calc(4 * var(--spacing-large));
+  color: var(--primary-color);
 }
 
 /* 6. Conteneur de Cartes (Modulable avec Flexbox) */
 .cards-container {
-    /* Honeycomb-friendly grid: center items and allow responsive columns */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 28px 20px;
-    justify-items: center;
-    align-items: start;
-    position: relative;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    background-color: var(--background-section2);
+  /* Honeycomb-friendly grid: center items and allow responsive columns */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px 20px;
+  justify-items: center;
+  align-items: start;
+  position: relative;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: var(--background-section2);
 }
 
 .cards-container.sticky {
-    position: sticky;
-    top: 0;
-    z-index: 2;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
-
-
 
 /* Hexagonal / alvéolaire cards using clip-path */
 .card {
-    width: 260px;
-    height: 260px;
-    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
-    color: var(--text-color);
-    -webkit-clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
-    clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 28px 20px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    text-align: center;
+  width: 260px;
+  height: 260px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  color: var(--text-color);
+  -webkit-clip-path: polygon(
+    25% 6.7%,
+    75% 6.7%,
+    100% 50%,
+    75% 93.3%,
+    25% 93.3%,
+    0% 50%
+  );
+  clip-path: polygon(
+    25% 6.7%,
+    75% 6.7%,
+    100% 50%,
+    75% 93.3%,
+    25% 93.3%,
+    0% 50%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
 }
 
 .card h4 {
-    color: #212529;
-    margin-bottom: 10px;
+  color: #212529;
+  margin-bottom: 10px;
 }
 
 /* Make headings and paragraphs fit nicely inside the clipped shape */
-.card h4, .card p {
-    margin: 0 0 8px 0;
-    padding: 0 6px;
+.card h4,
+.card p {
+  margin: 0 0 8px 0;
+  padding: 0 6px;
 }
 
 /* Small modifier to visually offset alternating rows for a honeycomb layout */
 .cards-container .card:nth-child(odd) {
-    transform-origin: center top;
+  transform-origin: center top;
 }
 
 /* Accent variants: gradients and subtle borders for visual variety */
 .card--accent-1 {
-    background: linear-gradient(135deg, #3BC6D0 0%, var(--background-color) 100%);
-    border: 1px solid rgba(0, 123, 255, 0.10);
+  background: linear-gradient(135deg, #3bc6d0 0%, var(--background-color) 100%);
+  border: 1px solid rgba(0, 123, 255, 0.1);
 }
 
 .card--accent-2 {
-    background: linear-gradient(205deg, #B960BB 0%, var(--background-color) 100%);
-    border: 1px solid rgba(255, 193, 7, 0.10);
+  background: linear-gradient(205deg, #b960bb 0%, var(--background-color) 100%);
+  border: 1px solid rgba(255, 193, 7, 0.1);
 }
 
 .card--accent-3 {
-    background: linear-gradient(135deg, #F8E354 0%, var(--background-color) 100%);
-    border: 1px solid rgba(255, 193, 7, 0.10);
+  background: linear-gradient(135deg, #f8e354 0%, var(--background-color) 100%);
+  border: 1px solid rgba(255, 193, 7, 0.1);
 }
 .carte_mentale {
-    background-color: var(--background-section2);
-    width: 100%;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 3;
+  background-color: var(--background-section2);
+  width: 100%;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 /* 7. Footer */
 .footer {
-    background-color: var(--background-darker);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: var(--spacing-medium);
-    margin-top: var(--spacing-large);
+  background-color: var(--background-darker);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: var(--spacing-medium);
+  margin-top: var(--spacing-large);
 }
 
 /* 8. Adaptabilité (Media Queries) */
 @media (max-width: 768px) {
-    /* Ajustements pour les écrans de taille tablette/mobile */
-    .hero {
-        background-image: url('assets/assets/abeille.jpg');
-        padding: 80px 0px;
-        text-align: center;
-        margin-bottom: var(--spacing-large);
-        width: 100vw;
-        max-width: 100vw;
-        position: sticky;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 0;
-        top: 0;
-        z-index: 1;
-        box-sizing: border-box;
-    }
-    .nav ul li a {
-        display: block;
-    }
+  /* Ajustements pour les écrans de taille tablette/mobile */
+  .hero {
+    background-image: url("assets/assets/abeille.jpg");
+    padding: 80px 0px;
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+    width: 100vw;
+    max-width: 100vw;
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+    top: 0;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+  .nav ul li a {
+    display: block;
+  }
 
-    .hero {
-        padding: 60px 20px;
-    }
+  .hero {
+    padding: 60px 20px;
+  }
 
-    .hero h2 {
-        font-size: 2em;
-    }
+  .hero h2 {
+    font-size: 2em;
+  }
 
-    .logo {
-        width: 36px;
-        height: 36px;
-    }
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 @media (max-width: 480px) {
-    .card {
-        width: 200px;
-        height: 220px;
-        padding: 18px 12px;
-    }
+  .card {
+    width: 200px;
+    height: 220px;
+    padding: 18px 12px;
+  }
 }
 
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--background-light); /* Utilisation de la variable */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-light); /* Utilisation de la variable */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .form-group {
-    margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 700;
-    color: var(--text-color);
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--text-color);
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
 }
 
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
+  border-color: var(--primary-color);
+  outline: none;
 }
 
 .form-group textarea {
-    resize: vertical;
-    min-height: 150px;
+  resize: vertical;
+  min-height: 150px;
 }
 
-/* From Uiverse.io by satyamchaudharydev */ 
+/* From Uiverse.io by satyamchaudharydev */
 /* The switch - the box around the slider */
 .switch {
   display: block;
@@ -401,21 +423,21 @@ h1, h2, h3, h4 {
   right: 0;
   bottom: 0;
   background-color: #f4f4f5;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 30px;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: var(--size-of-icon,1.4em);
-  width: var(--size-of-icon,1.4em);
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
   border-radius: 20px;
-  left: var(--slider-offset,0.3em);
+  left: var(--slider-offset, 0.3em);
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-  transition: .4s;
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -423,82 +445,85 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
   background: #303136;
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
 #my-section {
-    width: 100%;
-    height: 400px; /* taille de la section */
-    background-color: #f0f0f0;
-    position: relative;
+  width: 100%;
+  height: 400px; /* taille de la section */
+  background-color: #f0f0f0;
+  position: relative;
 }
 
 /* ---------------------------------------
    9. THREE.JS CANVAS
 ---------------------------------------- */
 #three-canvas {
-    width: 80%;
-    height: 74%;
-    border-radius: 8px;
-    position: relative;
-    margin: 2% 10%;
-    padding-bottom: 20px;
+  width: 80%;
+  height: 74%;
+  border-radius: 8px;
+  position: relative;
+  margin: 2% 10%;
+  padding-bottom: 20px;
 }
 
 /* Quiz */
 .quiz-question {
-    margin-bottom: var(--spacing-medium);
-    background-color: var(--background-section2);
-    padding: 20px;
-    border-radius: 8px;
+  margin-bottom: var(--spacing-medium);
+  background-color: var(--background-section2);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .quiz-question h4 {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .quiz-question label {
-    display: block;
-    margin-bottom: 8px;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .quiz-button {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 24px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
 }
 
 .quiz-button:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .quiz-result {
-    text-align: center;
-    font-weight: 700;
-    margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 /* Table */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: var(--spacing-medium);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-medium);
 }
 
-table, th, td {
-    border: 1px solid #ccc;
+table,
+th,
+td {
+  border: 1px solid #ccc;
 }
 
-th, td {
-    padding: 10px;
-    text-align: center;
+th,
+td {
+  padding: 10px;
+  text-align: center;
 }
