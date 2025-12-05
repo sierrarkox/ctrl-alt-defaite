@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<title>Clavier aléatoire FR – Mode nuit automatique</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Message obligatoire -->
+<div id="mandatory-overlay">
+  On va passer en mode sombre pour la confidentialité et le repos de vos beaux yeux 🌙
+</div>
+
+<!-- Overlay spotlight -->
+<div id="overlay" class="night-overlay" aria-hidden="true"></div>
+
+<!-- Contenu clavier -->
+<div id="container">
+  <input type="text" id="phone" placeholder="Entrez votre numéro" readonly>
+  <button id="erase">Effacer</button>
+  <div id="error"></div>
+</div>
+<div id="buttons"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

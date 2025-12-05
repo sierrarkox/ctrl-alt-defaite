@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Captcha Widget</title>
+
+<link rel="stylesheet" href="style.css" /> 
+
+    
+</head>
+<body>
+      <div class="menu">
+        <h3>⚠️ Cette page est volontairement frustrante et non ergonomique, <br>afin de répondre au défi de SOPRA STERIA MéRIGNAC<a id="back" href="https://ctrl-alt-defaite.insash.org/">Retour</a></h3>
+      </div>
+
+  <div class="check">
+    <button id="valide" type="button" hidden>Valider</button>
+    <div class="captcha-box" role="group" aria-label="Captcha">
+      <div class="left-group">
+        
+        <img src="sourceErgo/cathpa.jpg" id="imgCatchpa" alt="captcha image">
+        <div>
+          <p id="msg">Êtes-vous humain ?</p>
+          <p id="tries"></p>
+        </div>
+      </div>
+
+      <button id="captchaBtn" type="button">Cliquez ici</button>
+    
+      <button id="trap" type="button" hidden>Oui je suis un robot 🤖</button>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
