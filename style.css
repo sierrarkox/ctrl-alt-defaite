@@ -82,7 +82,7 @@ h1, h2, h3, h4 {
     color: var(--primary-color);
     margin-bottom: var(--spacing-medium);
     font-weight: 600;
-    padding: 4%;
+    padding: 2%;
 }
 
 

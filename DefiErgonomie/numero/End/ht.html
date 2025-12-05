@@ -1,0 +1,72 @@
+<html lang="fr-FR">
+<head>
+  <meta charset="utf-8" />
+  <title>Remerciement</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+      text-align: center;
+      background: url("../../sourceErgo/bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    canvas {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      width: 110vw;
+      height: 100vh;
+      z-index: 1; 
+      pointer-events: none;
+    }
+
+    .image {
+      position: fixed;
+      right: 100px;          
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 30vw;      
+      height: 30%;
+      z-index: 2;    
+    }
+
+
+    .menu {
+      position: relative;
+      z-index: 3; 
+      margin-top: 40px;
+      background-color: rgba(255, 255, 255, 0.75);
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://threejs.org/build/three.module.js",
+    "three/addons/": "https://threejs.org/examples/jsm/"
+  }
+}
+</script>
+
+
+<script type="module" src="script.js"></script>
+
+<body>
+
+
+  <img class="image" src="../../sourceErgo/smiley.jpg">
+
+  <div class="menu">
+    <h1>Merci pour votre temps (gaspillé)</h1>
+    <p>Votre numéro ne servira à rien 😈</p>
+  </div>
+
+</body>
+</html>
