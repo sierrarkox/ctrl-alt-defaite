@@ -165,3 +165,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialiser la visibilité au chargement
     updateJalonSectionVisibility();
 });
+
+document.getElementById('submitQuiz').addEventListener('click', () => {
+    const questions = document.querySelectorAll('.quiz-question');
+    let score = 0;
+
+    questions.forEach((q, index) => {
+        const answer = q.dataset.answer;
+        const selected = q.querySelector('input[type="radio"]:checked');
+        const resultDiv = document.createElement('div');
+
+        if(selected) {
+            if(selected.value === answer){
+                score++;
+                resultDiv.textContent = `Question ${index+1}: ✅ Correct`;
+                resultDiv.classList.add('correct');
+            } else {
+                resultDiv.textContent = `Question ${index+1}: ❌ Faux (Réponse: ${answer})`;
+                resultDiv.classList.add('wrong');
+            }
+        } else {
+            resultDiv.textContent = `Question ${index+1}: ❌ Non répondue (Réponse: ${answer})`;
+            resultDiv.classList.add('wrong');
+        }
+
+        q.appendChild(resultDiv);
+    });
+
+    const finalResult = document.getElementById('quizResult');
+    finalResult.textContent = `Votre score: ${score} / ${questions.length}`;
+});

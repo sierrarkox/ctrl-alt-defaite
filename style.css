@@ -73,6 +73,18 @@ a {
     color: var(--primary-color);
 }
 
+p {
+    margin-left: var(--spacing-medium);
+    padding: 2%;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-medium);
+    font-weight: 600;
+    padding: 4%;
+}
+
 
 /* ---------------------------------------
    3. HEADER
@@ -434,4 +446,59 @@ input:checked + .slider:before {
     position: relative;
     margin: 2% 10%;
     padding-bottom: 20px;
+}
+
+/* Quiz */
+.quiz-question {
+    margin-bottom: var(--spacing-medium);
+    background-color: var(--background-section2);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.quiz-question h4 {
+    margin-bottom: 12px;
+}
+
+.quiz-question label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.quiz-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.quiz-button:hover {
+    opacity: 0.9;
+}
+
+.quiz-result {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-medium);
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
 }

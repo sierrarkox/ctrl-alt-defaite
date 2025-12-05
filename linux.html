@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactez-nous | La démarche NIRD</title>
+    <title>Découvrir l'Open Source | NIRD</title>
+    <meta name="description" content="Découvrez les avantages de l'Open Source et testez vos connaissances avec notre quiz.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
+<header class="header">
         <div class="brand">
             <a href="index.html" class="brand-link">
                 <img src="assets/logo.png" alt="Logo" class="logo">
@@ -19,7 +20,7 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="index.html#a-propos">À Propos</a></li>
-                <li><a href="#contact">Contactez-nous</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <body data-theme="light"> 
                     <label class="switch">
                         <input type="checkbox" id="theme-switch"> <span class="slider"></span>
@@ -29,13 +30,114 @@
         </nav>
     </header>
 
-    <main class="main-content">
-        
-    </main>
+<main style="margin-top: 10%;">
+    <!-- Partie informations -->
+    <section id="infos" class="section">
+        <h2>Qu’est-ce que l’Open Source ?</h2>
+        <p>L’open source désigne des logiciels dont <strong>le code source est accessible et modifiable librement</strong>. Tout le monde peut : lire, améliorer, modifier et partager le code selon la licence.</p>
 
-    <footer class="footer">
-        <p>Des trucs en bas</p>
-    </footer>
-    <script src="javascript"></script>
+        <h3>Pourquoi utiliser l’Open Source ?</h3>
+        <ul>
+            <li><strong>Liberté :</strong> tu choisis ce que tu veux faire avec le logiciel.</li>
+            <li><strong>Transparence :</strong> le code est public, donc facile à vérifier et améliorer.</li>
+            <li><strong>Communauté :</strong> des milliers de personnes collaborent pour corriger et améliorer le logiciel.</li>
+            <li><strong>Prix :</strong> souvent gratuit, mais surtout <strong>le contrôle appartient à l’utilisateur</strong>.</li>
+        </ul>
+
+        <h3>Exemples connus d’outils Open Source :</h3>
+        <ul>
+            <li>Systèmes : Linux (Ubuntu, Fedora)</li>
+            <li>Navigateurs : Firefox</li>
+            <li>Retouche photo : GIMP, Krita</li>
+            <li>Montage vidéo : Kdenlive, Blender</li>
+            <li>Développement : Git, VS Code (partiellement open source)</li>
+        </ul>
+
+        <h3>Licences Open Source :</h3>
+        <table>
+            <tr>
+                <th>Licence</th>
+                <th>Modifier</th>
+                <th>Vendre</th>
+                <th>Partager code</th>
+            </tr>
+            <tr>
+                <td>MIT</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>Non</td>
+            </tr>
+            <tr>
+                <td>GPL</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>Oui</td>
+            </tr>
+            <tr>
+                <td>Apache 2.0</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>Non</td>
+            </tr>
+            <tr>
+                <td>CC-BY-SA</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>Oui + attribution</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Partie quiz -->
+    <section id="quiz" class="section">
+        <h2>Testez vos connaissances !</h2>
+
+        <div class="quiz-question" data-answer="B">
+            <h4>1. Qu’est-ce que l’open source ?</h4>
+            <label><input type="radio" name="q1" value="A"> Un logiciel gratuit</label>
+            <label><input type="radio" name="q1" value="B"> Un logiciel dont le code est public</label>
+            <label><input type="radio" name="q1" value="C"> Un logiciel piraté</label>
+        </div>
+
+        <div class="quiz-question" data-answer="B">
+            <h4>2. Quel est l’avantage principal de l’open source ?</h4>
+            <label><input type="radio" name="q2" value="A"> Personne ne peut modifier le logiciel</label>
+            <label><input type="radio" name="q2" value="B"> On peut accéder au code</label>
+            <label><input type="radio" name="q2" value="C"> Il est forcément payant</label>
+        </div>
+
+        <div class="quiz-question" data-answer="C">
+            <h4>3. La licence MIT oblige :</h4>
+            <label><input type="radio" name="q3" value="A"> À partager le code modifié</label>
+            <label><input type="radio" name="q3" value="B"> À payer pour l’utiliser</label>
+            <label><input type="radio" name="q3" value="C"> À rien, elle est très permissive</label>
+        </div>
+
+        <div class="quiz-question" data-answer="A">
+            <h4>4. Pourquoi l’open source progresse vite ?</h4>
+            <label><input type="radio" name="q4" value="A"> Car une communauté améliore le logiciel</label>
+            <label><input type="radio" name="q4" value="B"> Car personne ne peut y toucher</label>
+            <label><input type="radio" name="q4" value="C"> Car il est interdit de vendre</label>
+        </div>
+
+        <div class="quiz-question" data-answer="B">
+            <h4>5. Le contraire de l’open source est :</h4>
+            <label><input type="radio" name="q5" value="A"> Un logiciel libre</label>
+            <label><input type="radio" name="q5" value="B"> Un logiciel propriétaire</label>
+            <label><input type="radio" name="q5" value="C"> Une licence MIT</label>
+        </div>
+
+        <button class="quiz-button" id="submitQuiz">Voir les résultats</button>
+        <div class="quiz-result" id="quizResult"></div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 ctrl+alt+défaite – Open Source & Libre pensée</p>
+    <a href="mentions_legales.html">Mentions Légales</a>
+</footer>
+
+<script src="javascript.js"></script>
 </body>
 </html>
