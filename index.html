@@ -22,8 +22,8 @@
         <nav class="nav">
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#a-propos">À Propos</a></li>
-                <li><a href="contact.html">Contactez-nous</a></li>
+                <li><a href="#about-us.html">A propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
 
                 <!-- Theme Switch -->
                 <li>
@@ -45,26 +45,79 @@
             <h2>Bienvenue sur notre site</h2>
             <p>Découvrez nos solutions innovantes et notre design raffiné.</p>
         </section>
-
+        
         <!-- JALONS -->
+         <section id="3-jalons" class="section" style = "position : relative; top: 0; z-index: 2;">
+            <h3>La démarche NIRD en 3 jalons</h3>
+            <div class="jalons-texte">
+                    <p>La démarche NIRD (pour un Numérique Inclusif, Responsable et Durable) propose aux établissements scolaires un cheminement progressif en trois jalons.</p>
+                    <br>
+                    <p>Elle commence par une phase de <strong>mobilisation</strong>, où un enseignant volontaire initie la réflexion et sensibilise l’équipe éducative, avec le soutien de la direction et une mise en réseau avec d’autres établissements.</p>
+                    <br>
+                    <p>Vient ensuite <strong>l’expérimentation</strong>, au cours de laquelle des postes Linux, neufs ou reconditionnés, sont installés et utilisés dans l’établissement. Les élèves peuvent s’impliquer directement à travers un club informatique consacré au reconditionnement, tandis que la direction accompagne activement le suivi et que la collectivité commence à être associée.</p>
+                    <br>
+                    <p>Enfin, <strong>l’intégration</strong> permet d’inscrire durablement la démarche dans le projet d’établissement et dans le parc informatique, avec une collaboration renforcée entre enseignants, direction et collectivité pour garantir la pérennité et la cohérence de l’ensemble.</p>
+            </div>
+        </section>
         <section id="Explain" class="section cards-container">
-            <div class="card card--accent-1">
+            <div class="card card--accent-1" id="card-accent-1">
                 <h4>Jalon 1 – Mobilisation</h4>
             </div>
-
-            <div class="card card--accent-2">
+            <div class="card card--accent-2"id="card-accent-2">
                 <h4>Jalon 2 – Expérimentation</h4>
             </div>
-
-            <div class="card card--accent-3">
+            <div class="card card--accent-3"id="card-accent-3">
                 <h4>Jalon 3 – Intégration</h4>
+            </div>
+        </section>
+        <section id="jalons-details" class="section" style="position:sticky;top:0;z-index:2;">
+            <div class="jalons-texte" id="jalon-texte-1" style="display:none; top: 0; z-index: 2;">
+                <p><strong>Objectif :</strong> sensibiliser l’établissement scolaire et initier une dynamique collective autour de la démarche NIRD.</p>
+                <p><strong>Actions clés :</strong></p>
+                <ul>
+                    <li>Identification, par auto-désignation, d’un enseignant volontaire qui devient contact NIRD de l’établissement.</li>
+                    <li>Organisation d’un premier temps d’information auprès de l’équipe éducative (enseignants, direction, personnels techniques, voire familles) pour présenter les enjeux d’un numérique inclusif, responsable et durable.</li>
+                    <li>Mise en réseau de ce contact sur Tchap avec d’autres établissements engagés afin de partager pratiques, ressources et retours d’expérience, participation aux webinaires du collectif.</li>
+                    <li>Diffusion de premiers supports pédagogiques et techniques pour nourrir la réflexion dans l’établissement.</li>
+                    <li>Information et sensibilisation de la direction de l’établissement, pour qu’elle soutienne le lancement de la démarche.</li>
+                    <li>Information préliminaire de la collectivité de rattachement (commune, département ou région) pour signaler l’initiative et préparer de futurs échanges.</li>
+                </ul>
+                <p><strong>Résultat attendu :</strong> une prise de conscience collective, la constitution d’un premier relais interne capable d’initier la démarche et une direction informée et favorable au lancement.</p>
+            </div>
+            <div class="jalons-texte" id="jalon-texte-2" style="display:none;position : relative; top: 0; z-index: 2;">
+                <p><strong>Objectif :</strong> tester des solutions concrètes et évaluer leur pertinence pour l’établissement et les usagers.</p>
+                <p><strong>Actions clés :</strong></p>
+                <ul>
+                    <li>Installation et usage de postes de travail, neufs ou reconditionnés, équipés d’un système d’exploitation Linux.</li>
+                    <li>Pour les collèges et les lycées, création d’un club informatique où les élèves participent activement au reconditionnement d’ordinateurs sous Linux, encadrés par l’enseignant-coordinateur et éventuellement des partenaires extérieurs (associations, collectivités, étudiants).</li>
+                    <li>Pour les écoles, priorité donnée à la distribution PrimTux adaptée aux usages pédagogiques du premier degré, des actions de reconditionnement peuvent également être menées en classe par les élèves, conformément aux programmes de technologie en cycle 3, en petits groupes lors d’Activités Pédagogiques Complémentaires (APC) ou dans le cadre du Projet Éducatif Territorial (PEDT).</li>
+                    <li>Organisation de séances d’appropriation et de formation pour les enseignants et les élèves.</li>
+                    <li>Début d’un suivi : retours d’usage, points d’amélioration, identification d’obstacles (techniques, organisationnels, culturels).</li>
+                    <li>Le contact initial devient coordinateur NIRD, chargé d’accompagner ses collègues et de centraliser les retours.</li>
+                    <li>Suivi régulier par la direction pour mesurer l’impact pédagogique, organisationnel et technique de l’expérimentation.</li>
+                    <li>Échanges avec la collectivité pour envisager les aspects logistiques (compatibilité technique, intégration au réseau, etc.).</li>
+                </ul>
+                <p><strong>Résultat attendu :</strong> une première expérience concrète dans l’établissement, documentée et analysée, permettant d’éclairer la suite de la démarche, avec une direction associée au suivi et une collectivité progressivement intégrée dans la réflexion.</p>
+            </div>
+            <div class="jalons-texte" id="jalon-texte-3" style="display:none;position : relative; top: 0; z-index: 2;">
+                <p><strong>Objectif :</strong> inscrire durablement la démarche NIRD dans l’établissement et lui donner une portée structurelle.</p>
+                <p><strong>Actions clés :</strong></p>
+                <ul>
+                    <li>Intégration progressive des postes expérimentés dans le parc informatique de l’établissement et leur interconnexion avec le réseau de la collectivité de rattachement.</li>
+                    <li>Inscription de la démarche dans le projet d’établissement, validée par la direction et présentée au conseil d’administration ou équivalent, en lien avec les axes pédagogiques, numériques, environnementaux et inclusifs.</li>
+                    <li>Valorisation de l’expérience auprès de la communauté éducative (retours d’expérience, communication externe, participation aux réseaux académiques).</li>
+                    <li>Le coordinateur NIRD devient référent NIRD de l’établissement, reconnu comme interlocuteur privilégié auprès de la direction, des collectivités et du ministère.</li>
+                    <li>La direction devient pilote de la démarche : elle l’inscrit dans les instances officielles et communique auprès des familles et partenaires.</li>
+                    <li>Mise en place d’une coopération structurée avec la collectivité pour assurer la pérennité et la continuité du service (extension du parc, maintenance, sécurité, réseau, financement, inclusion dans les politiques locales du numérique éducatif, etc.).</li>
+                </ul>
+                <p><strong>Résultat attendu :</strong> une intégration complète de la démarche, soutenue institutionnellement, connectée à la collectivité, et inscrite dans la durée.</p>
             </div>
         </section>
 
         <!-- CARTE MENTALE -->
-        <section id="parcours" class="carte_mantale">
+        <section id="parcours" class="carte_mentale">
             <h3>Nos Services</h3>
-            <div id="three-canvas"></div>
+            <div id="three-canvas">
              <script type="importmap">
                 {
                 "imports": {
@@ -73,14 +126,8 @@
                     }
                 }
             </script>
+            </div>
         <script type="module" src="Nuit_info/carte_script.js"></script> 
-        </section>
-
-
-        <!-- À PROPOS -->
-        <section id="a-propos" class="section about">
-            <h3>Notre Philosophie</h3>
-            <p>Blabla</p>
         </section>
     </main>
 

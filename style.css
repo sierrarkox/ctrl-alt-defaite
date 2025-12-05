@@ -1,8 +1,26 @@
+/* Explication sous les jalons */
+.jalons-explication {
+    background: var(--background-section1);
+    padding: 32px 0 24px 0;
+    max-width: 900px;
+    margin: 0 auto 32px auto;
+}
+.jalons-texte {
+    font-size: 1.15em;
+    color: var(--text-color);
+    line-height: 1.7;
+    text-align: left;
+    margin : var(--spacing-large)
+}
+.jalons-texte p {
+    margin-bottom: 0;
+}
+
 /* ---------------------------------------
    1. VARIABLES CSS
 ---------------------------------------- */
 :root {
-    --primary-color: #007bff;
+    --primary-color: #ff01fb;
     --secondary-color: #6c757d;
 
     /* Light theme */
@@ -10,7 +28,8 @@
     --background-light: #f8f9fa;
     --background-dark: #343a40;
     --background-darker: #212529;
-    --background-section: #e9ecef;
+    --background-section1: #e9e9e9;
+    --background-section2: #f8f8f8;
 
     --text-color: #212529;
 
@@ -26,7 +45,9 @@
     --background-light: #1f1f1f;
     --background-dark: #262626;
     --background-darker: #1a1a1a;
-    --background-section: #1f1f1f;
+    --background-section1:#2c2c2c;
+    --background-section2: #1f1f1f;
+
     --text-color: #e9ecef;
     --secondary-color: #9aa0a6;
 }
@@ -57,7 +78,7 @@ a {
    3. HEADER
 ---------------------------------------- */
 .header {
-    background-color: var(--background-section);
+    background-color: var(--background-section2);
     color: var(--text-color);
     padding: var(--spacing-medium) var(--spacing-large);
 
@@ -115,10 +136,9 @@ a {
 
 /* 4. Contenu Principal (Main) et Sections */
 .section {
-    background-color: var(--background-section);
+    background-color: var(--background-section1);
     padding: var(--spacing-large) 0;
-    border-bottom: 1px solid var(--background-dark);
-    width: 100vw;
+    /* border-bottom: 1px solid var(--background-dark); */
     max-width: 100vw;
     margin: 0;
 }
@@ -136,16 +156,14 @@ a {
     background-image: url('assets/abeille.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    padding: 80px 0px;
+    padding: 80px;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     position: sticky;
-    left: 50%;
     border-radius: 0;
     top: 0;
     z-index: 1;
-    color: #e9ecef;
+    color: var(--primary-color);
 
 }
 
@@ -153,7 +171,8 @@ a {
     font-size: 2.5em;
     margin-bottom: 10px;
     margin-top: calc(4 * var(--spacing-large));
-    color: #e9ecef;
+    color: var(--primary-color);
+
 }
 
 /* 6. Conteneur de Cartes (Modulable avec Flexbox) */
@@ -164,12 +183,20 @@ a {
     gap: 28px 20px;
     justify-items: center;
     align-items: start;
-    position : sticky;
+    position: relative;
     top: 0;
-    z-index: 1;
-    width: 100vw;
-
+    z-index: 2;
+    width: 100%;
+    background-color: var(--background-section2);
 }
+
+.cards-container.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+
 
 /* Hexagonal / alvéolaire cards using clip-path */
 .card {
@@ -195,7 +222,7 @@ a {
 }
 
 .card h4 {
-    color: var(--primary-color);
+    color: #212529;
     margin-bottom: 10px;
 }
 
@@ -225,19 +252,18 @@ a {
     background: linear-gradient(135deg, #F8E354 0%, var(--background-color) 100%);
     border: 1px solid rgba(255, 193, 7, 0.10);
 }
-.carte_mantale {
-    background-color: var(--background-section);
-    margin-bottom: var(--spacing-large);
-    width: 100vw;
+.carte_mentale {
+    background-color: var(--background-section2);
+    width: 100%;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 3;
 }
 
 /* 7. Footer */
 .footer {
-    background-color: var(--background-section);
+    background-color: var(--background-darker);
     color: var(--secondary-color);
     text-align: center;
     padding: var(--spacing-medium);
@@ -289,48 +315,48 @@ a {
 }
 
 .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: var(--background-light); /* Utilisation de la variable */
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-        }
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-light); /* Utilisation de la variable */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
 
-        .form-group {
-            margin-bottom: var(--spacing-medium);
-        }
+.form-group {
+    margin-bottom: var(--spacing-medium);
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 700;
-            color: var(--text-color);
-        }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--text-color);
+}
 
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-            font-size: 1em;
-            box-sizing: border-box;
-            transition: border-color 0.3s;
-        }
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
 
-        .form-group input[type="text"]:focus,
-        .form-group input[type="email"]:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
 
 /* From Uiverse.io by satyamchaudharydev */ 
 /* The switch - the box around the slider */
@@ -398,22 +424,16 @@ input:checked + .slider:before {
     position: relative;
 }
 
-canvas {
-    display: block; /* supprime les marges autour du canvas */
-}
-
 /* ---------------------------------------
    9. THREE.JS CANVAS
 ---------------------------------------- */
 #three-canvas {
     width: 80%;
     height: 74%;
-    background-color: var(--background-dark);
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    display: block;
-    
     position: relative;
-    margin: 2% 10%
+    margin: 2% 10%;
+    padding-bottom: 20px;
 }
+
+

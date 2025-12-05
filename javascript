@@ -120,4 +120,48 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'light');
         }
     });
+
+    // --- Affichage dynamique du texte jalon ---
+    const jalonTextes = [
+      document.getElementById('jalon-texte-1'),
+      document.getElementById('jalon-texte-2'),
+      document.getElementById('jalon-texte-3')
+    ];
+    const cards = [
+      document.getElementById('card-accent-1'),
+      document.getElementById('card-accent-2'),
+      document.getElementById('card-accent-3')
+    ];
+    const jalonSection = document.getElementById('jalons-details');
+
+    function updateJalonSectionVisibility() {
+      const anyVisible = jalonTextes.some(txt => txt.style.display !== 'none');
+      if (jalonSection) {
+        jalonSection.style.display = anyVisible ? '' : 'none';
+      }
+      const explainSection = document.getElementById('Explain');
+      if (explainSection) {
+        if (!anyVisible) {
+          explainSection.classList.add('sticky');
+        } else {
+          explainSection.classList.remove('sticky');
+        }
+      }
+    }
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', () => {
+        // Si le texte est déjà visible, on le masque (toggle)
+        const isVisible = jalonTextes[idx].style.display !== 'none';
+        if (isVisible) {
+          jalonTextes.forEach(txt => txt.style.display = 'none');
+        } else {
+          jalonTextes.forEach((txt, i) => {
+            txt.style.display = (i === idx) ? 'block' : 'none';
+          });
+        }
+        updateJalonSectionVisibility();
+      });
+    });
+    // Initialiser la visibilité au chargement
+    updateJalonSectionVisibility();
 });
