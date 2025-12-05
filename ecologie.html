@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales | La démarche NIRD</title>
+    <title>Écologie & NIRD | Numérique Responsable</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header class="header">
+<header class="header">
         <div class="brand">
             <a href="index.html" class="brand-link">
                 <img src="assets/logo.png" alt="Logo" class="logo">
@@ -18,8 +19,8 @@
         <nav class="nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="about-us.html">A propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#a-propos">À Propos</a></li>
+                <li><a href="#contact">Contactez-nous</a></li>
                 <body data-theme="light"> 
                     <label class="switch">
                         <input type="checkbox" id="theme-switch"> <span class="slider"></span>
@@ -28,14 +29,133 @@
             </ul>
         </nav>
     </header>
-    
-    <main class="main-content" style="margin-top: 10%;">
-    </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 ctrl+alt+défaite – Open Source & Libre pensée</p>
-        <a href="mentions_legales.html">Mentions Légales</a>
-    </footer>
-    <script src="javascript.js"></script>
+<main>
+
+    <!-- ────────────────────── INFO SECTION ────────────────────── -->
+    <section>
+        <h2>🌿 L’écologie selon la démarche NIRD</h2>
+        <p>
+            Le numérique représente près de <strong>4% des émissions mondiales de CO₂</strong>, un chiffre en augmentation chaque année.
+            La démarche <strong>NIRD : Numérique Inclusif, Responsable & Durable</strong> vise à rendre la technologie plus utile,
+            accessible et respectueuse de l’environnement.
+        </p>
+
+        <p>Elle repose sur trois piliers :</p>
+
+        <ul>
+            <li>♻️ <strong>Durabilité :</strong> lutter contre l’obsolescence programmée, réparer, réutiliser.</li>
+            <li>🌍 <strong>Responsabilité :</strong> réduire l’impact écologique du matériel et des logiciels.</li>
+            <li>🧑‍🤝‍🧑 <strong>Inclusivité :</strong> permettre l’accès au numérique sans pousser à la surconsommation.</li>
+        </ul>
+
+        <p>
+            L’objectif n’est pas d’arrêter d’utiliser le numérique, mais de le rendre <strong>plus humain et plus durable</strong>.
+        </p>
+    </section>
+
+    <!-- ────────────────────── TABLEAU ────────────────────── -->
+    <section>
+        <h2>📊 Impact du numérique & Solutions NIRD</h2>
+
+        <table>
+            <tr>
+                <th>Problème environnemental</th>
+                <th>Impact</th>
+                <th>Solution NIRD</th>
+            </tr>
+            <tr>
+                <td>Fabrication d’appareils</td>
+                <td>Pollution + extraction minière</td>
+                <td>Réparer, reconditionner, allonger la durée de vie</td>
+            </tr>
+            <tr>
+                <td>Centres de données</td>
+                <td>Émissions CO₂ + énergie consommée</td>
+                <td>Optimiser stockage, hébergement éco-responsable</td>
+            </tr>
+            <tr>
+                <td>Logiciels trop lourds</td>
+                <td>Matériel rendu obsolète + énergie</td>
+                <td>Éco-conception logicielle, sobriété numérique</td>
+            </tr>
+            <tr>
+                <td>Déchets électroniques</td>
+                <td>Pollution durable & toxique</td>
+                <td>Recycler, réduire, limiter le renouvellement</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ────────────────────── ACTIONS NIRD ────────────────────── -->
+    <section>
+        <h2>💡 Innovations & Actions individuelles</h2>
+        <p>
+            Le NIRD soutient des innovations technologiques écologiques tout en encourageant des gestes simples.
+        </p>
+
+        <ul>
+            <li>🔋 Faire durer son matériel (réparation, reconditionné)</li>
+            <li>🌐 Utiliser des sites et applications sobres</li>
+            <li>🧹 Vider ses mails, limiter le cloud inutile</li>
+            <li>🧩 Favoriser les logiciels libres & optimisés</li>
+            <li>🛠 Réparer au lieu de remplacer systématiquement</li>
+        </ul>
+    </section>
+
+    <!-- ────────────────────── QUIZ ────────────────────── -->
+    <!-- Partie quiz -->
+<!-- Partie quiz -->
+<section id="quiz" class="section">
+    <h2>Testez vos connaissances sur l'écologie !</h2>
+
+    <div class="quiz-question" data-answer="B">
+        <h4>1. Quel est le principal gaz à effet de serre ?</h4>
+        <label><input type="radio" name="q1" value="A"> L’oxygène</label>
+        <label><input type="radio" name="q1" value="B"> Le dioxyde de carbone</label>
+        <label><input type="radio" name="q1" value="C"> L’azote</label>
+    </div>
+
+    <div class="quiz-question" data-answer="A">
+        <h4>2. Quelle énergie est renouvelable ?</h4>
+        <label><input type="radio" name="q2" value="A"> L’énergie solaire</label>
+        <label><input type="radio" name="q2" value="B"> Le charbon</label>
+        <label><input type="radio" name="q2" value="C"> Le pétrole</label>
+    </div>
+
+    <div class="quiz-question" data-answer="C">
+        <h4>3. Quelle action réduit le plus les déchets plastiques ?</h4>
+        <label><input type="radio" name="q3" value="A"> Recycler le plastique</label>
+        <label><input type="radio" name="q3" value="B"> Laisser les déchets sur place</label>
+        <label><input type="radio" name="q3" value="C"> Réduire l’utilisation de plastique</label>
+    </div>
+
+    <div class="quiz-question" data-answer="A">
+        <h4>4. Qu’est-ce qu’un circuit court ?</h4>
+        <label><input type="radio" name="q4" value="A"> Un produit vendu près de sa production</label>
+        <label><input type="radio" name="q4" value="B"> Un produit importé de loin</label>
+        <label><input type="radio" name="q4" value="C"> Un produit acheté sur internet</label>
+    </div>
+
+    <div class="quiz-question" data-answer="B">
+        <h4>5. Pourquoi protéger la biodiversité ?</h4>
+        <label><input type="radio" name="q5" value="A"> Pour augmenter la pollution</label>
+        <label><input type="radio" name="q5" value="B"> Pour maintenir l’équilibre des écosystèmes</label>
+        <label><input type="radio" name="q5" value="C"> Pour construire des villes</label>
+    </div>
+
+    <button class="quiz-button" id="submitQuiz">Voir les résultats</button>
+    <div class="quiz-result" id="quizResult"></div>
+</section>
+
+
+
+</main>
+
+<footer>
+    <p>© 2025 – Démarche NIRD – Pour un numérique durable 🌱</p>
+</footer>
+
+<script src="javascript.js"></script>
 </body>
 </html>
